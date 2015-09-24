@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* 
+    Created on : 04-May-2015, 08:38:48
+    Author     : guillaume.vandecasteele
+*/
+
+/* NORMALIZE */
+
+html, header, hr, footer, ul, li, a, body, div, section, article, aside, nav {
+    margin:0;
+    padding:0;
+}
+img {
+    border:none;
+    float:left;
+    margin: 0 1.25em 0.5em 0;
+}
+table{
+    border-collapse:collapse;
+    border-spacing: 0;
+    empty-cells:hide;
+}
+
+/**** GENERAL ****/
+
+body {
+    font-family: serif, "Times new Roman", "Palatino";
+    font-size: 100%;
+    color: #665950;    
+    word-wrap: break-word;  
+}
+
+.contentWrapper {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section {
+    padding-left: 1em;
+}
+
+h1 {
+    color: #00735D;
+    font-size: 250%;
+}
+
+h2 {    
+    color: #d64708;
+    font-size: 150%;
+}
+
+h3 {
+    color: #52463F;
+    font-size: 115%;
+}
+
+hr {
+    border-top: 1px #dcdad8 solid;
+}
+
+.purpleSpaced {
+    color: #9a3098;
+    letter-spacing: .3em;
+}
+
+
+/**** HEADER ****/
+
+header {
+    background-color: #d64708;
+    width: 100%;
+}
+
+.topmenu {
+    text-align: center;
+}
+
+.topmenu ul li {
+    display:inline;
+    max-width: 90%;
+}
+
+.topmenu ul li a {
+    display: inline-block;
+    font-size: 100%;
+    color:white;
+    text-decoration: none;
+    padding: 1.2em 5% 1.2em 5%;
+    border-left: 1px white solid;
+}
+
+.topmenu ul li:last-of-type a {
+    border-right: 1px white solid;
+}
+
+.topmenu ul li a:hover, a:active, a.actief {
+    background-color: #D61D00;
+    text-decoration: none;
+}
+
+/**** TOP SECTION ****/
+
+#vacatures {
+    display: inline;
+    padding-right: 1em;
+}
+
+#toplogo {            
+    padding: 10em;
+    background-image: url(../img/youngtarzan.png);
+    background-position: top, left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline;
+    float: right;
+    min-width: 7em;
+    
+}
+
+.topsection ul {
+    padding-left: 3em;
+}
+
+.topsection ul li {
+    border-radius: .2em;
+    margin-bottom: 1em;
+    list-style-type: none;
+    width: 40%;
+    min-width: 10em;
+}
+
+.topsection .jobItem {
+    padding: 1.5% 4%;
+    display: block;
+    border-radius: .5em;
+    text-decoration: none;
+    height: 100%;
+    font-size: 130%;
+    color: white;
+    background-color: #d64708;
+    min-width: 10em;
+}
+
+.topsection .jobItem:hover {
+    padding: 1.5% 4%;
+    border-radius: .5em;
+    display: block;
+    background-color: #00735D;
+    text-decoration: none;
+    height: 100%;
+    min-width: 10em;
+}
+
+/**** MIDDLE SECTION ****/
+
+.middlesection h1 {
+    display: none;
+}
+
+.tableContainer {
+    width: 100%;      
+    display: flex;
+}
+
+.middlecolumn {
+    width: 50%;
+    float:left;
+    background-image: url(../img/drupal-8.png);
+    background-size: 29em;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    flex: 1;
+}
+
+.sidecolumn {
+    width: 23%;
+    float:left;
+    padding-right: 2%;
+}
+
+.sidecolumn .columnLogo {
+    background-image: url(../img/angularjs.png);
+    padding-top: 70%;
+    background-size: 70%;    
+    background-repeat: no-repeat;
+}
+
+.sidecolumn a {
+    font-weight: bold;
+    color: #00735D;
+    text-decoration: none;
+}
+
+.sidecolumn a:hover {
+    text-decoration: underline;
+}
+
+.sidecolumn:last-of-type {
+    padding-right: 0;
+    padding-left: 2%;
+}
+
+.sidecolumn:last-of-type .columnLogo {
+    background-image: url(../img/js.jpg);
+}
+
+/**** BOTTOM SECTION ****/
+.bottomsection h1 {
+    display: none;
+}
+
+#requirements {
+    list-style-type: none;
+}
+
+#requirements li {
+    background-image: url(../img/female_128.png);
+    background-size: 8em;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding: 2% 0 2% 9em;
+}
+
+#requirements li:first-child {
+    background-image: url(../img/home_128.png);
+}
+
+#requirements li:last-child {
+    background-image: url(../img/pink_128.png);
+}
+
+/**** FOOTER ****/
+
+footer {
+    background-color: #303F43;
+    width: 100%;
+    
+}
+
+.colofon {   
+    padding: 2.5em 0;
+    height: 1em;
+    width: 100%;
+}
+
+.left {
+    float: left;
+    color: white;
+    width: 48%;
+    padding-left: 2%;
+}
+
+.left a {
+    text-decoration: none;
+    color: #00735D;
+}
+
+.left a:hover {
+    color: #9A3098;
+    text-decoration: underline;
+}
+
+.right {
+    float: right;
+    text-align: right;
+    width:48%;
+    padding-right: 2%;
+}
+
+.right time {
+    background-color: white;
+    color: #303F43;
+    font-weight: bold;
+}
+
+/*
+clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/ 
+*/
+.clearFix:before, .clearFix:after {
+ content: " ";
+ display: table;
+}
+.clearFix:after {
+ clear: both;
+}
+
+@media screen and (max-width: 469px) {
+    .topmenu ul li a {
+        width: 90%;
+        border-bottom: 1px solid white;
+        border-left: none;
+        
+    }
+    
+    .topmenu ul li a:hover, a:active, a.actief {
+        width: 90%;
+        border-bottom: 1px solid white;
+    }
+    
+    .topmenu ul li a:last-of-type {
+        border-right: none;
+    }
+}
